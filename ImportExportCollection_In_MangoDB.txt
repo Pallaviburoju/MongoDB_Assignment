@@ -1,0 +1,21 @@
+1. How to export collection?
+A: To export the collection, at mongodb bin file open command window and enter the below command
+	> mongoexport --host <host_name> --username <user_name> --password <password> --db <database_name> --collection <collection_name> --out <output_file>
+
+	Where:
+		--host is an optional parameter that specifies the remote server Mongo database instance
+		--username and --password are the optional parameters that specify the authentication details of a user
+		--db specifies the database name
+		--collection specifies the collection name
+		--out specifies the path of the output file. If this is not specified, the result is displayed on the console.
+
+2. How to import collection?
+A: To import collection, first you should have a json file. Then you should write the following command in the mongodb bin command window. The command is as follows
+	> mongoimport --host <host_name> --username <user_name> --password <password> --db <database_name> --collection <collection_name> --file <input_file>
+
+	Where:
+		--host is an optional parameter that specifies the remote server Mongo database instance
+		--username and --password are the optional parameters that specify the authentication details of a user
+		--db specifies the database name
+		--collection specifies the collection name
+		--file specifies the path of the input file. If this is not specified, the standard input (i.e. stdin) is used
